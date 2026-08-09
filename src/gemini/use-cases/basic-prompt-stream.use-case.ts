@@ -31,7 +31,7 @@ export const basicPromptStreamUseCase = async (
   );
 
   const {
-    model = 'gemini-2.0-flash',
+    model = 'gemini-3.1-flash-lite',
     systemInstruction = `
       Responde únicamente en español 
       En formato markdown 

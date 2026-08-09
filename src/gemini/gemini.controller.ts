@@ -16,11 +16,16 @@ import { BasicPromptDto } from './dtos/basic-prompt.dto';
 
 @Controller('gemini')
 export class GeminiController {
-  constructor(private readonly geminiService: GeminiService) {}
+  constructor(private readonly geminiService: GeminiService) { }
 
   @Post('basic-prompt')
   basicPrompt(@Body() basicPromptDto: BasicPromptDto) {
     return this.geminiService.basicPrompt(basicPromptDto);
+  }
+
+  @Post('basic-prompt-claude')
+  basicPromptClaude(@Body() basicPromptDto: BasicPromptDto) {
+    return this.geminiService.basicPromptClaude(basicPromptDto);
   }
 
   @Post('basic-prompt-stream')
